@@ -1,6 +1,6 @@
-group: mmlu_option_fixing_fix_D
+group: mmlu_option_fixing
 task:
-- mmlu_option_fixing_fix_D_stem
-- mmlu_option_fixing_fix_D_other
-- mmlu_option_fixing_fix_D_social_sciences
-- mmlu_option_fixing_fix_D_humanities
+- mmlu_option_fixing_fix_A
+- mmlu_option_fixing_fix_B
+- mmlu_option_fixing_fix_C
+- mmlu_option_fixing_fix_D
