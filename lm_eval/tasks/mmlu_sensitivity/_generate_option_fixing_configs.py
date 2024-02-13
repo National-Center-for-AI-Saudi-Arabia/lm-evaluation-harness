@@ -170,8 +170,8 @@ def process_docs(dataset):
 
 if __name__ == "__main__":
     keys = ['A', 'B', 'C', 'D']
-    os.makedirs('mmlu_selection_bias', exist_ok=True)
-    os.chdir('mmlu_selection_bias')
+    os.makedirs('option_fixing', exist_ok=True)
+    os.chdir('option_fixing')
 
     for key in keys:
         exp_name = f'fix_{key}'
@@ -183,5 +183,5 @@ if __name__ == "__main__":
         with open('utils.py', 'w') as f:
             f.write(PROCESS_DOC_FSTRING.format(key=key))
         # print(os.listdir())
-        generate_configs(base_yaml_path='_default_template_yaml', save_prefix_path=exp_name, task_prefix="selection_bias_" + exp_name, group_prefix=f'mmlu_selection_bias_{exp_name}')
+        generate_configs(base_yaml_path='_default_template_yaml', save_prefix_path=exp_name, task_prefix="option_fixing_" + exp_name, group_prefix=f'mmlu_option_fixing_{exp_name}')
         os.chdir('../')

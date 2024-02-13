@@ -1,0 +1,6 @@
+group: mmlu_option_fixing_fix_A
+task:
+- mmlu_option_fixing_fix_A_stem
+- mmlu_option_fixing_fix_A_other
+- mmlu_option_fixing_fix_A_social_sciences
+- mmlu_option_fixing_fix_A_humanities
