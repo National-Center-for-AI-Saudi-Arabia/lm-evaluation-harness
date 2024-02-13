@@ -1,6 +1,0 @@
-group: mmlu_selection_bias_fix_B
-task:
-- mmlu_selection_bias_fix_B_stem
-- mmlu_selection_bias_fix_B_other
-- mmlu_selection_bias_fix_B_social_sciences
-- mmlu_selection_bias_fix_B_humanities
