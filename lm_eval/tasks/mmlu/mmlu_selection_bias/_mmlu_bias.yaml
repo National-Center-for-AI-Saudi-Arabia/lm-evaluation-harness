@@ -1,0 +1,6 @@
+group: mmlu_selection_bias
+task:
+- mmlu_selection_bias_fix_A
+- mmlu_selection_bias_fix_B
+- mmlu_selection_bias_fix_C
+- mmlu_selection_bias_fix_D
