@@ -3,13 +3,11 @@ Take in a YAML, and output all "other" splits with this YAML
 """
 import os
 import yaml
-import argparse
 import shutil
 
 from tqdm import tqdm
 
 from lm_eval import utils
-# from lm_eval.logger import eval_logger
 
 SUBJECTS = {
     "abstract_algebra": "stem",
@@ -72,20 +70,9 @@ SUBJECTS = {
 }
 
 
-def parse_args():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--base_yaml_path", required=True)
-    parser.add_argument("--save_prefix_path", default="mmlu")
-    parser.add_argument("--task_prefix", default="")
-    parser.add_argument("--group_prefix", default="")
-    return parser.parse_args()
-
-
 def generate_configs(base_yaml_path, save_prefix_path, task_prefix, group_prefix):
     # get filename of base_yaml so we can `"include": ` it in our "other" YAMLs.
     base_yaml_name = os.path.split(base_yaml_path)[-1]
-    # with open(base_yaml_path) as f:
-    #     base_yaml = yaml.full_load(f)
     
     ALL_CATEGORIES = []
     for subject, category in tqdm(SUBJECTS.items()):
@@ -134,7 +121,6 @@ def generate_configs(base_yaml_path, save_prefix_path, task_prefix, group_prefix
     
     file_save_path = "_mmlu.yaml"
 
-    # eval_logger.info(f"Saving benchmark config to {file_save_path}")
     with open(file_save_path, "w") as yaml_file:
         yaml.dump(
             {
@@ -183,7 +169,6 @@ def process_docs(dataset):
 '''
 
 if __name__ == "__main__":
-    # args = parse_args()
     keys = ['A', 'B', 'C', 'D']
     os.makedirs('mmlu_selection_bias', exist_ok=True)
     os.chdir('mmlu_selection_bias')
