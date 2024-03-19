@@ -1,0 +1,8 @@
+"dataset_name": "business_ethics"
+"description": "The following are multiple choice questions (with answers) about business\
+  \ ethics.\n\n"
+"group": "mmlu_option_fixing_fix_B_other"
+"group_alias": "other"
+"include": "_default_template_yaml"
+"task": "mmlu_option_fixing_fix_B_business_ethics"
+"task_alias": "business ethics"

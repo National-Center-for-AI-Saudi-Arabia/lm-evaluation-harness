@@ -1,0 +1,6 @@
+group: mmlu_shuffle_options
+task:
+- mmlu_shuffle_options_stem
+- mmlu_shuffle_options_other
+- mmlu_shuffle_options_social_sciences
+- mmlu_shuffle_options_humanities
